@@ -1,0 +1,234 @@
+@mixin reset-button {
+  align-items: flex-start;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-align: center;
+  text-transform: none;
+  text-decoration: none;
+  text-indent: 0;
+  text-shadow: none;
+  word-spacing: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: default;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin link-reset {
+  all: unset;
+}
+
+.banner {
+  position: fixed;
+  right: 40px;
+  bottom: 0;
+  z-index: 9999;
+  display: none;
+  width: 578px;
+
+  &_active {
+    display: flex;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 32px);
+    max-height: calc(100vh - 64px);
+    margin: 16px;
+    overflow: auto;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+
+    &_buttons {
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    &_links {
+      justify-content: center;
+      gap: 32px;
+
+      @media (max-width: $breakpoint-mobile) {
+        justify-content: space-between;
+        gap: 8px;
+      }
+    }
+  }
+
+  .modal__cross {
+    width: 14px;
+    height: 14px;
+    margin-right: 0;
+
+    @media (max-width: $breakpoint-mobile) {
+      top: 10px;
+      right: 10px;
+      width: 6px;
+      height: 6px;
+    }
+  }
+
+  &__button {
+    @include reset-button;
+    display: inline-block;
+    flex: 1;
+    height: 32px;
+    color: #282727;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: 'BarlowCondensed', sans-serif;
+    line-height: 18px;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    size: 14px;
+
+    @media (max-width: $breakpoint-mobile) {
+      height: 20px;
+      font-size: 10px;
+      line-height: 130%;
+    }
+
+    &_primary {
+      color: #E6E6E6;
+      background-color: $color-brand;
+
+      @media (max-width: $breakpoint-mobile) {
+        flex-basis: 100%;
+      }
+    }
+
+    &_secondary {
+      border: 1px solid $color-main;
+    }
+  }
+
+  .banner-content {
+    position: relative;
+    max-width: 600px;
+    height: fit-content;
+    padding: 25px 32px;
+    background-color: #FFFFFF;
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: 12px;
+    }
+
+    p {
+      margin: 0 0 16px;
+      padding-right: 8px;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: -0.03em;
+
+
+      @media (max-width: $breakpoint-mobile) {
+        margin: 0 0 4px;
+        font-size: 7px;
+        line-height: 150%;
+      }
+    }
+
+    .link {
+      @include link-reset;
+      color: #C2C2C2;
+      font-size: 12px;
+      line-height: 150%;
+      letter-spacing: -0.03em;
+      white-space: nowrap;
+      text-decoration: underline;
+      cursor: pointer;
+
+      @media (max-width: $breakpoint-mobile) {
+        font-size: 7px;
+      }
+    }
+  }
+
+  .banner__settings {
+    display: none;
+    margin-bottom: 12px;
+
+    &_active {
+      display: block;
+    }
+  }
+
+  .accordion__item {
+    padding: 3px 0 5px;
+    border-bottom-color: #C2C2C2;
+
+    .accordion__button {
+      display: flex;
+      align-items: center;
+      height: 36px;
+
+      @media (max-width: $breakpoint-mobile) {
+        height: 22px;
+      }
+
+      .switch {
+        margin-right: 12px;
+
+        @media (max-width: $breakpoint-mobile) {
+          margin-right: 9px;
+        }
+      }
+
+      .subtitle {
+        flex: 1;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+
+        @media (max-width: $breakpoint-mobile) {
+          font-size: 10px;
+          line-height: 150%;
+        }
+      }
+
+      &::after {
+        display: none;
+      }
+
+      &--active {
+        margin-bottom: 0;
+      }
+    }
+
+    .plus {
+      width: 21px;
+      height: 21px;
+      background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.837 10H3.16304C3.07337 10 3 10.0947 3 10.2105V11.7895C3 11.9053 3.07337 12 3.16304 12H17.837C17.9266 12 18 11.9053 18 11.7895V10.2105C18 10.0947 17.9266 10 17.837 10Z' fill='%23FF6700'/%3E%3Cpath d='M12 17.837L12 3.16304C12 3.07337 11.9053 3 11.7895 3L10.2105 3C10.0947 3 10 3.07337 10 3.16304L10 17.837C10 17.9266 10.0947 18 10.2105 18L11.7895 18C11.9053 18 12 17.9266 12 17.837Z' fill='%23FF6700'/%3E%3C/svg%3E%0A");
+      cursor: pointer;
+
+      @media (max-width: $breakpoint-mobile) {
+        width: 10px;
+        height: 10px;
+        background-size: cover;
+      }
+    }
+
+    &--active {
+      .plus {
+        background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.837 10H3.16304C3.07337 10 3 10.0947 3 10.2105V11.7895C3 11.9053 3.07337 12 3.16304 12H17.837C17.9266 12 18 11.9053 18 11.7895V10.2105C18 10.0947 17.9266 10 17.837 10Z' fill='%23FF6700'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+}

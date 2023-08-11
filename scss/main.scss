@@ -1,0 +1,71 @@
+@import 'vendor/normalize.scss';
+@import 'variables.scss';
+@import 'components.scss';
+@import 'sections/header.scss';
+@import 'sections/hero.scss';
+@import 'sections/ticker.scss';
+@import 'sections/message.scss';
+@import 'sections/accordion.scss';
+@import 'sections/connect.scss';
+@import 'sections/works.scss';
+@import 'sections/footer.scss';
+@import 'sections/menu.scss';
+@import 'sections/modal.scss';
+@import 'sections/impressum.scss';
+@import 'sections/datenschutz.scss';
+@import 'sections/banner.scss';
+@import 'sections/switch.scss';
+@import 'sections/form.scss';
+
+
+@font-face {
+  font-weight: 400;
+  font-family: 'IBMPlexMono';
+  src: url('../../assets/fonts/IBMPlexMono-Regular.woff2');
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: 'IBMPlexMono';
+  src: url('../../assets/fonts/IBMPlexMono-SemiBold.woff2');
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: 'BarlowCondensed';
+  src: url('../../assets/fonts/BarlowCondensed-SemiBold.woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: 'BarlowCondensed';
+  src: url('../../assets/fonts/BarlowCondensed-Bold.woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: 'Benzin';
+  src: url('../../assets/fonts/benzin-bold.woff2');
+}
+
+
+body {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #282727;
+  font-weight: 400;
+  font-family: 'IBMPlexMono', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

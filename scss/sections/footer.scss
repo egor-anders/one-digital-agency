@@ -1,0 +1,138 @@
+.footer {
+  padding: 67px 0 24px;
+
+  &--cookie {
+    padding: 4px 0 7px;
+    border-top: 1px solid $color-main;
+  }
+
+  @media (max-width: $breakpoint-tb) {
+    padding: 40px 0 24px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 40px 0 13px;
+
+    &--cookie {
+      padding: 24px 0 13px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &--cookie {
+      padding-top: 4px;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    margin-bottom: 40px;
+    color: #FF6700;
+    font-size: 70px;
+    font-family: 'Benzin', sans-serif;
+    line-height: 90%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    &--cookie {
+      width: fit-content;
+      margin-bottom: 0;
+      color: #282727;
+      font-weight: 700;
+      font-size: 46px;
+      font-family: 'BarlowCondensed', sans-serif;
+      font-style: normal;
+      line-height: 150%;
+    }
+
+    @media (max-width: $breakpoint-tb) {
+      font-size: 36px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      order: 1;
+      margin-bottom: 24px;
+
+      &--cookie {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 182px;
+
+    @media (max-width: $breakpoint-tb) {
+      gap: 42px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      order: 3;
+      justify-content: space-between;
+      gap: unset;
+      width: 100%;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    @media (max-width: $breakpoint-mobile) {
+      order: 2;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      justify-content: space-between;
+      gap: unset;
+      width: 100%;
+      margin-bottom: 25px;
+
+      &--cookie {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    color: $color-brand;
+    font-weight: 600;
+    font-size: 28px;
+    font-family: 'BarlowCondensed', sans-serif;
+    line-height: 130%;
+    text-transform: uppercase;
+
+    &--cookie {
+      color: $color-brand;
+      font-weight: 400;
+      font-size: 18px;
+      font-family: 'IBMPlexMono', sans-serif;
+      line-height: 150%;
+      text-transform: none;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 22px;
+
+      &--tel {
+        order: 2;
+        font-size: 18px;
+      }
+
+      &--mail {
+        order: 1;
+      }
+
+      &--cookie {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+.works {
+  padding: 163px 0 84px;
+  border-bottom: 1px solid $color-main;
+
+  @media (max-width: $breakpoint-tb) {
+    padding: 80px 0;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 56px 0 41px;
+  }
+
+  &__cases {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  &__desk {
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    display: none;
+
+    @media (max-width: $breakpoint-mobile) {
+      display: block;
+    }
+  }
+
+  &__title {
+    margin-bottom: 57px;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__case {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    width: 100%;
+    max-height: 448px;
+    margin-bottom: 18px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 36px;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__button {
+    width: 325px;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.connect {
+  background: $color-main;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 72px;
+    padding-bottom: 83px;
+
+    @media (max-width: $breakpoint-tb) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding-top: 55px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__title {
+    max-width: 1000px;
+    margin-bottom: 26px;
+    color: $color-brand;
+
+    @media (max-width: $breakpoint-tb) {
+      max-width: 640px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 19px;
+    }
+  }
+
+  &__text {
+    max-width: 670px;
+  }
+
+  &__button {
+    border: 1px solid $color-main;
+
+    &:hover {
+      border: 1px solid #E6E6E6;
+    }
+  }
+}

@@ -1,0 +1,160 @@
+.impressum {
+  padding-top: 48px;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding-top: 22px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    margin-bottom: 73px;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 42px;
+    }
+
+    h2 {
+      margin-bottom: 33px;
+
+      @media (max-width: $breakpoint-mobile) {
+        max-width: 244px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    @media (max-width: 1040px) {
+      gap: 20px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &--1 {
+      margin-right: 245px;
+
+      @media (max-width: $breakpoint-xl) {
+        margin-right: 265px;
+      }
+
+      @media (max-width: 1040px) {
+        margin-right: 0;
+      }
+    }
+
+    &--2 {
+      margin-right: 194px;
+
+      @media (max-width: $breakpoint-xl) {
+        margin-right: auto;
+      }
+
+      @media (max-width: 1040px) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__contact {
+    margin-bottom: 76px;
+
+    h2 {
+      margin-bottom: 17px;
+
+      @media (max-width: $breakpoint-mobile) {
+        margin-bottom: 21px;
+      }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__br {
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    gap: 142px;
+    margin-bottom: 61px;
+
+    @media (max-width: $breakpoint-xl) {
+      gap: 182px;
+    }
+
+    h3 {
+      a {
+        color: $color-main;
+      }
+    }
+
+    @media (max-width: $breakpoint-tb) {
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 37px;
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    gap: 60px;
+
+    @media (max-width: $breakpoint-tb) {
+      flex-direction: column;
+      gap: 7px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 61px;
+
+    @media (max-width: $breakpoint-tb) {
+      gap: 25px;
+    }
+  }
+
+  &__disclaimer {
+    padding-bottom: 107px;
+
+    @media (max-width: $breakpoint-tb) {
+      padding-bottom: 45px;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+    }
+
+    &-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+
+      @media (max-width: $breakpoint-tb) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

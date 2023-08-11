@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="2000"
+   height="2000"
+   viewBox="0 0 2000 2000"
+   sodipodi:docname="Логотип треугольник.ai"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath16">
+      <path
+         d="M 0,1500 H 1500 V 0 H 0 Z"
+         id="path14" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="g8"
+     inkscape:groupmode="layer"
+     inkscape:label="Логотип треугольник"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,2000)">
+    <g
+       id="g10">
+      <g
+         id="g12"
+         clip-path="url(#clipPath16)">
+        <g
+           id="g18"
+           transform="translate(743.8807,1334.6753)">
+          <path
+             d="m 0,0 -667.966,-1162.317 c -2.704,-4.705 0.692,-10.575 6.119,-10.575 H 674.085 c 5.427,0 8.824,5.87 6.12,10.575 L 12.239,0 C 9.526,4.722 2.714,4.722 0,0"
+             style="fill:#191918;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path20" />
+        </g>
+        <g
+           id="g22"
+           transform="translate(498.1271,407.0762)">
+          <path
+             d="m 0,0 h -0.562 l 240.737,418.902 c 5.187,9.026 18.209,9.026 23.396,0 L 492.69,20.215 C 497.859,11.22 491.366,0 480.992,0 H 182.15 c -8.436,0 -16.231,-4.5 -20.449,-11.806 L 97.434,-123.119 c -5.193,-8.995 1.299,-20.239 11.685,-20.239 h 619.603 c 10.374,0 16.867,11.221 11.698,20.216 L 263.571,706.615 c -5.187,9.026 -18.209,9.026 -23.396,0 l -476.849,-829.757 c -5.17,-8.995 1.323,-20.216 11.698,-20.216 H -96.4 c 8.436,0 16.231,4.501 20.448,11.806 z"
+             style="fill:#ff6700;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path24" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

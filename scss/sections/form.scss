@@ -1,0 +1,171 @@
+.form {
+  &__inputs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 34px;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 8px;
+    }
+  }
+
+  .textarea {
+    height: 162px;
+    resize: none;
+
+    @media (max-width: $breakpoint-mobile) {
+      height: 120px;
+    }
+  }
+
+  .input {
+    height: 54px;
+
+    @media (max-width: $breakpoint-mobile) {
+      height: 40px;
+    }
+  }
+
+  .input, .textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 16px 17px 17px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%; /* 21px */
+    letter-spacing: -0.42px;
+    border: 1px solid #282727;
+    outline: none;
+    transition: border 0.3s;
+
+    &:hover {
+      border: 1px solid #F7B990;
+    }
+
+    &:focus {
+      border: 1px solid #EE702E;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: 11px 17px 8px;
+    }
+  }
+
+  .custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+
+  .custom-label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%; /* 21px */
+    letter-spacing: -0.42px;
+
+    &::before {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='17' height='17' stroke='%23282727'/%3E%3C/svg%3E%0A");
+      background-size: cover;
+      cursor: pointer;
+      content: '';
+    }
+
+    a {
+      color: #282727;
+      text-decoration: none;
+      border-bottom: 1px solid #EE702E;
+      transition: border 0.3s;
+
+      &:hover {
+        border-bottom: 1px solid transparent;
+      }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding-left: 22px;
+      font-size: 10px;
+
+      &::before {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+
+  .custom-checkbox:checked + label::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='17' height='17' stroke='%23282727'/%3E%3Cg clip-path='url(%23clip0_6_36)'%3E%3Cpath d='M10.3398 6.26596L6.98203 9.53191L5.63453 8.22128L4.28594 6.90957L3.14297 8.02128C2.38719 8.75638 2 9.14042 2 9.15425C2 9.18511 6.95141 14 6.98422 14C7.00063 14 8.28359 12.7564 11.5014 9.62234C13.9722 7.21489 15.9967 5.23723 15.9989 5.22766C16.0033 5.20638 13.7403 3 13.7141 3C13.7053 3 12.1861 4.46915 10.3398 6.26596Z' fill='%23282727'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_6_36'%3E%3Crect width='14' height='11' fill='white' transform='translate(2 3)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  }
+
+  &__button {
+    display: block;
+    width: 325px;
+    height: 60px;
+    margin-top: 37px;
+    color: #E8EDF7;
+    font-weight: 700;
+    font-size: 32px;
+    font-family: 'BarlowCondensed', sans-serif;
+    line-height: 150%; /* 48px */
+    text-transform: uppercase;
+    background: #EE702E;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    span {
+      position: relative;
+      padding-right: 39px;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 32px;
+        height: 23px;
+        background-image: url("data:image/svg+xml,%3Csvg width='32' height='23' viewBox='0 0 32 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30.8137 12.3136C31.3995 11.7278 31.3995 10.7781 30.8137 10.1923L21.2678 0.646328C20.682 0.0605412 19.7322 0.0605412 19.1465 0.646328C18.5607 1.23211 18.5607 2.18186 19.1465 2.76765L27.6317 11.2529L19.1465 19.7382C18.5607 20.324 18.5607 21.2737 19.1465 21.8595C19.7322 22.4453 20.682 22.4453 21.2678 21.8595L30.8137 12.3136ZM0.753052 12.7529L29.7531 12.7529V9.75293L0.753052 9.75293L0.753052 12.7529Z' fill='%23E6E6E6'/%3E%3C/svg%3E%0A");
+        transition: transform 0.3s;
+        transform: translateY(-50%);
+        content: '';
+      }
+    }
+
+    &:hover {
+      background: #282727;
+
+      span {
+        &::after {
+          transform: translate(10px, -50%);
+        }
+      }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 100%;
+      margin-top: 14px;
+      font-size: 16px;
+      line-height: 130%;
+
+      span {
+        padding-right: 27px;
+
+        &::after {
+          width: 21px;
+          height: 16px;
+          background-image: url("data:image/svg+xml,%3Csvg width='21' height='16' viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.6067 8.70711C20.9972 8.31658 20.9972 7.68342 20.6067 7.29289L14.2427 0.928932C13.8522 0.538408 13.219 0.538408 12.8285 0.928932C12.438 1.31946 12.438 1.95262 12.8285 2.34315L18.4854 8L12.8285 13.6569C12.438 14.0474 12.438 14.6805 12.8285 15.0711C13.219 15.4616 13.8522 15.4616 14.2427 15.0711L20.6067 8.70711ZM0.100586 9H19.8996V7H0.100586V9Z' fill='%23E6E6E6'/%3E%3C/svg%3E%0A");
+        }
+      }
+    }
+  }
+}

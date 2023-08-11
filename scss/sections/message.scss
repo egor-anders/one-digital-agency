@@ -1,0 +1,16 @@
+.message {
+  padding: 43px 0 174px;
+  border-bottom: 1px solid $color-main;
+
+  @media (max-width: $breakpoint-xl) {
+    padding: 43px 0 104px;
+  }
+
+  @media (max-width: $breakpoint-tb) {
+    padding: 40px 0;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 34px 0 38px;
+  }
+}

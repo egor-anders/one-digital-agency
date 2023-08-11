@@ -1,0 +1,77 @@
+.accordion {
+  &__item {
+    padding: 23px 0 19px;
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: 20px 0;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-main;
+    }
+
+    &--active {
+      padding: 23px 0 34px;
+      transition: all 0.2s ease-out;
+
+      @media (max-width: $breakpoint-mobile) {
+        padding: 20px 0;
+      }
+    }
+  }
+
+  &__button {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+    background: none;
+    border: none;
+
+    &::after {
+      position: absolute;
+      top: 17px;
+      right: 0;
+      width: 33px;
+      height: 33px;
+      background-image: url("data:image/svg+xml,%3Csvg width='33' height='33' viewBox='0 0 33 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5332 4.89844H17.4668C17.6387 4.89844 17.7246 4.98437 17.7246 5.15625V27.8438C17.7246 28.0156 17.6387 28.1016 17.4668 28.1016H15.5332C15.3613 28.1016 15.2754 28.0156 15.2754 27.8438V5.15625C15.2754 4.98437 15.3613 4.89844 15.5332 4.89844Z' fill='%23FF6700'/%3E%3Cpath d='M5.67188 15.2754H27.3281C27.5 15.2754 27.5859 15.3613 27.5859 15.5332V17.4668C27.5859 17.6387 27.5 17.7246 27.3281 17.7246H5.67188C5.5 17.7246 5.41406 17.6387 5.41406 17.4668V15.5332C5.41406 15.3613 5.5 15.2754 5.67188 15.2754Z' fill='%23FF6700'/%3E%3C/svg%3E%0A");
+      content: '';
+
+      @media (max-width: $breakpoint-mobile) {
+        top: 0;
+      }
+    }
+
+    &--active {
+      margin-bottom: 11px;
+      transition: all 0.2s ease-out;
+
+
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='33' height='33' viewBox='0 0 33 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.1016 15.2754H4.89844C4.75664 15.2754 4.64062 15.3914 4.64062 15.5332V17.4668C4.64062 17.6086 4.75664 17.7246 4.89844 17.7246H28.1016C28.2434 17.7246 28.3594 17.6086 28.3594 17.4668V15.5332C28.3594 15.3914 28.2434 15.2754 28.1016 15.2754Z' fill='%23FF6700'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  &__text {
+    max-width: 670px;
+    margin-left: auto;
+
+    @media (max-width: $breakpoint-tb) {
+      max-width: none;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      letter-spacing: 0.01em;
+    }
+  }
+}

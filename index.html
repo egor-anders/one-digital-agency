@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/itc-slider.min.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link type="image/x-icon" href="/assets/favicon/favicon.ico" rel="shortcut icon" />
+    <link type="image/x-icon" href="/assets/favicon/favicon.ico" rel="icon" />
+    <title>ANAR AGENCY</title>
+    <meta name="description" content="ANAR AGENCY" />
+  </head>
+
+  <body class="body">
+    <div class="modal modal--form">
+      <div class="modal__content modal__content--form">
+        <div class="modal__header modal__header--form">
+          <h3 class="modal__title modal__title--form">Web & Design – Hier entlang!</h3>
+          <h3 class="modal__title modal__title--form modal__title--mb">Web und Design - Hier entlang!</h3>
+          <p class="modal__descr">Digitalkontakt aufnehmen!</p>
+          <div class="modal__cross modal__cross--form"></div>
+        </div>
+        <form action="#" class="form" method="POST" id="send-form" enctype="multipart/form-data">
+          <div class="form__inputs">
+            <label class="form__label">
+              <input class="input input-name" type="text" data-validate-field="name" name="Name" placeholder="Wer bist du?" autofocus required/>
+            </label>
+            <label class="form__label">
+              <input class="input input-mail" type="email" data-validate-field="email" name="Email" placeholder="Deine Email?" required/>
+            </label>
+            <label class="form__label">
+              <input class="input input-tel" type="tel" data-validate-field="tel" name="Phone" placeholder="Telefon für Rückfragen?" required/>
+            </label>
+            <label class="form__label">
+              <input class="input input-theme" type="text" data-validate-field="betreff" name="Subject" placeholder="Betreff?" required/>
+            </label>
+            <label class="form__label">
+              <textarea
+                class="textarea"
+                data-validate-field="textarea"
+                name="Message"
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Jedes Detail zählt! Was hast du vor?"
+                required
+                minlength="2"
+              ></textarea>
+            </label>
+          </div>
+          <div class="form__checkbox">
+            <input type="checkbox" class="custom-checkbox" id="checkbox" required />
+            <label class="custom-label" for="checkbox"
+              >Bitte bestätige die <a href="datenschutz.html" target="_blank">Datenschutzbestimmungen</a> gelesen und verstanden zu haben, sowie die
+              Übermittlung deiner Daten.</label
+            >
+          </div>
+          <button data-sitekey="6Lc_ApMnAAAAAOqCxT0HZN3IiQsXtiZJmNF3nurZ" data-callback="onSubmit" data-action="submit" type="submit" class="modal__button form__button g-recaptcha">
+            <span>Senden</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal modal--thanks">
+      <div class="modal__content modal__content--thanks">
+        <div class="modal__header modal__header--thanks">
+          <h3 class="modal__title modal__title--thanks">Super, das hat geklappt! Du hörst bald von uns</h3>
+          <div class="modal__cross modal__cross--form"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="banner" class="banner">
+      <div class="banner-content">
+        <p>
+          Wir verwenden Cookies, um Ihnen ein optimales Webseiten-Erlebnis zu bieten. Dazu zählen Cookies, die für den Betrieb der Seite und für die
+          Steuerung unserer kommerziellen Unternehmensziele notwendig sind, sowie solche, die lediglich zu anonymen Statistikzwecken, für
+          Komforteinstellungen oder zur Anzeige personalisierter Inhalte genutzt werden. Bitte beachten Sie, dass auf Basis Ihrer Einstellungen
+          womöglich nicht mehr alle Serviceleistungen auf der Seite zur Verfügung stehen. Weitere Informationen finden Sie in unseren
+          Datenschutzhinweisen.
+        </p>
+
+        <ul class="banner__settings" id="banner-settings">
+          <li class="accordion__item">
+            <div>
+              <button class="accordion__button">
+                <span class="subtitle">Funktional</span>
+                <label class="switch disabled">
+                  <input type="checkbox" id="cookie-system" disabled checked />
+                  <span class="slider"></span>
+                </label>
+                <div class="plus"></div>
+              </button>
+              <div class="accordion__content">
+                <p class="accordion__text text">
+                  Die technische Speicherung oder der Zugang ist unbedingt erforderlich für den rechtmäßigen Zweck, die Nutzung eines bestimmten
+                  Dienstes zu ermöglichen, der vom Teilnehmer oder Nutzer ausdrücklich gewünscht wird, oder für den alleinigen Zweck, die Übertragung
+                  einer Nachricht über ein elektronisches Kommunikationsnetz durchzuführen.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="accordion__item">
+            <div>
+              <button class="accordion__button">
+                <span class="subtitle">Statistiken</span>
+                <label class="switch">
+                  <input type="checkbox" id="cookie-analytics" checked />
+                  <span class="slider"></span>
+                </label>
+                <div class="plus"></div>
+              </button>
+              <div class="accordion__content">
+                <p class="accordion__text text">
+                  Die technische Speicherung oder der Zugriff, der ausschließlich zu anonymen statistischen Zwecken verwendet wird. Ohne eine
+                  Vorladung, die freiwillige Zustimmung deines Internetdienstanbieters oder zusätzliche Aufzeichnungen von Dritten können die zu
+                  diesem Zweck gespeicherten oder abgerufenen Informationen allein in der Regel nicht dazu verwendet werden, dich zu identifizieren.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="accordion__item">
+            <div>
+              <button class="accordion__button">
+                <span class="subtitle">Marketing</span>
+                <label class="switch">
+                  <input type="checkbox" id="cookie-marketing" checked />
+                  <span class="slider"></span>
+                </label>
+                <div class="plus"></div>
+              </button>
+              <div class="accordion__content">
+                <p class="accordion__text text">
+                  Die technische Speicherung oder der Zugriff ist erforderlich, um Nutzerprofile zu erstellen, um Werbung zu versenden oder um den
+                  Nutzer auf einer Website oder über mehrere Websites hinweg zu ähnlichen Marketingzwecken zu verfolgen.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="banner__row banner__row_buttons">
+          <button id="cookie-accept" class="banner__button banner__button_primary">akzeptieren</button>
+          <button id="cookie-accept-required" class="banner__button banner__button_secondary">ablehnen</button>
+          <button id="cookie-settings" class="banner__button banner__button_secondary">EINSTELLUNGEN ANPASSEN</button>
+        </div>
+
+        <div class="banner__row banner__row_links">
+          <a href="cookie.html" class="link">Сoockie-Richtlinie</a>
+          <a href="datenschutz.html" class="link">Datenschutz</a>
+          <a href="impressum.html" class="link">Impressum</a>
+        </div>
+
+        <div id="banner-close" class="modal__cross"></div>
+      </div>
+    </div>
+
+    <div class="menu">
+      <div class="container">
+        <div class="menu__cross"></div>
+
+        <div class="menu__wrapper">
+          <a href="#" class="menu__logo">anar agency</a>
+          <div class="menu__list">
+            <a class="text menu__item" href="#about">About</a>
+            <a class="text menu__item" href="#works">Works</a>
+            <a class="text menu__item" href="#services">Services</a>
+          </div>
+          <div class="menu__links">
+            <a href="mailto:info@anar.at" class="menu__link">info@anar.at</a>
+            <a href="tel:+491756666066" class="menu__link">+49 175 6666066</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal--smm">
+      <div class="modal__content">
+        <div class="modal__cross"></div>
+        <div class="itc-slider slider--smm" data-slider="itc-slider" data-loop="true" data-autoplay="false">
+          <div class="itc-slider__wrapper">
+            <div class="itc-slider__items modal__slider">
+              <div class="itc-slider__item modal__slide modal__slide--smm">
+                <div class="modal__left">
+                  <h4 class="modal__title">Mirvari</h4>
+                  <h5 class="modal__subtitle">Hauptaufgaben</h5>
+                  <p class="text modal__text modal__text--smm">
+                    / Entwicklung eines Konzepts für die Profilführung. <br />
+                    / Integration von Corporate Identity-Elementen in das Profildesign. <br />
+                    / Erstellung und Veröffentlichung von relevantem Content (Posts, Stories, Reels).
+                  </p>
+                </div>
+                <div class="modal__right">
+                  <img class="modal__desk" src="/assets/img/smm-1.png" alt="" />
+                </div>
+              </div>
+              <div class="itc-slider__item modal__slide modal__slide--smm">
+                <div class="modal__left">
+                  <h4 class="modal__title">#BAMBOO BAR</h4>
+                  <h5 class="modal__subtitle">Hauptaufgaben</h5>
+                  <p class="text modal__text modal__text--smm">
+                    / Entwicklung eines Konzepts für die Profilführung. <br />
+                    / Integration von Corporate Identity-Elementen in das Profildesign. <br />
+                    / Erstellung und Veröffentlichung von relevantem Content (Posts, Stories, Reels).
+                  </p>
+                </div>
+                <div class="modal__right">
+                  <img class="modal__desk" src="/assets/img/smm-2.png" alt="" />
+                </div>
+              </div>
+              <div class="itc-slider__item modal__slide modal__slide--smm">
+                <div class="modal__left">
+                  <h4 class="modal__title">SKIN ART</h4>
+                  <h5 class="modal__subtitle">Hauptaufgaben</h5>
+                  <p class="text modal__text modal__text--smm">
+                    / Entwicklung eines Konzepts für die Profilführung. <br />
+                    / Integration von Corporate Identity-Elementen in das Profildesign. <br />
+                    / Erstellung und Veröffentlichung von relevantem Content (Posts, Stories, Reels).
+                  </p>
+                </div>
+                <div class="modal__right">
+                  <img class="modal__desk" src="/assets/img/smm-3.png" alt="" />
+                </div>
+              </div>
+              <div class="itc-slider__item modal__slide modal__slide--smm">
+                <div class="modal__left">
+                  <h4 class="modal__title">UNICA OSTERIA</h4>
+                  <h5 class="modal__subtitle">Hauptaufgaben</h5>
+                  <p class="text modal__text modal__text--smm">
+                    / Entwicklung eines Konzepts für die Profilführung. <br />
+                    / Integration von Corporate Identity-Elementen in das Profildesign.
+                  </p>
+                </div>
+                <div class="modal__right">
+                  <img class="modal__desk" src="/assets/img/smm-4.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="itc-slider__btn itc-slider__btn_prev"></button>
+          <button class="itc-slider__btn itc-slider__btn_next"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal modal--design">
+      <div class="modal__content modal__content--design">
+        <div class="modal__cross"></div>
+        <div class="itc-slider slider--design" data-slider="itc-slider" data-loop="true" data-autoplay="false">
+          <div class="itc-slider__wrapper">
+            <div class="itc-slider__items modal__slider">
+              <div class="itc-slider__item modal__slide modal__slide--design">
+                <div class="modal__design-wrapper">
+                  <p class="text modal__text modal__text--design">Entwicklung einer Corporate Identity für</p>
+                  <h4 class="modal__title modal__title--design">Circle Retail Store</h4>
+
+                  <div class="modal__pictures">
+                    <div class="modal__pic modal__pic--1">
+                      <img src="/assets/img/pic--1.png" alt="" />
+                    </div>
+                    <div class="modal__pic modal__pic--2">
+                      <img src="/assets/img/pic--2.png" alt="" />
+                    </div>
+                    <div class="modal__pic modal__pic--3">
+                      <img src="/assets/img/pic--3.png" alt="" />
+                    </div>
+                    <div class="modal__pic modal__pic--4">
+                      <img src="/assets/img/pic--4.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="itc-slider__item modal__slide modal__slide--design">
+                <div class="modal__design-wrapper">
+                  <p class="text modal__text modal__text--design">Entwicklung einer Corporate Identity für</p>
+                  <h4 class="modal__title modal__title--design">das Restaurant Aladdin</h4>
+
+                  <div class="modal__pictures">
+                    <div class="modal__pic modal__pic--5">
+                      <img src="/assets/img/pic--5.png" alt="" />
+                    </div>
+                    <div class="modal__pic modal__pic--6">
+                      <img src="/assets/img/pic--6.png" alt="" />
+                    </div>
+                    <div class="modal__pic modal__pic--7">
+                      <img src="/assets/img/pic--7.png" alt="" />
+                    </div>
+                    <div class="modal__pic modal__pic--8">
+                      <img src="/assets/img/pic--8.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="itc-slider__item modal__slide modal__slide--design">
+                <div class="modal__design-wrapper">
+                  <p class="text modal__text modal__text--design">Entwicklung einer Corporate Identity für</p>
+                  <h4 class="modal__title modal__title--design">die Tanzschule Ideal Dance</h4>
+
+                  <div class="modal__pictures">
+                    <div class="modal__pic modal__pic--9">
+                      <img src="/assets/img/pic--9.png" alt="" />
+                    </div>
+                    <div class="modal__pic modal__pic--10">
+                      <img src="/assets/img/pic--10.png" alt="" />
+                    </div>
+                    <div class="modal__pic modal__pic--11">
+                      <img src="/assets/img/pic--11.png" alt="" />
+                    </div>
+                    <div class="modal__pic modal__pic--12">
+                      <img src="/assets/img/pic--12.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="itc-slider__btn itc-slider__btn_prev"></button>
+          <button class="itc-slider__btn itc-slider__btn_next"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <div class="wrapper__content">
+        <header class="header">
+          <div class="header__wrapper container">
+            <a href="#" class="header__logo">anar agency</a>
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#about" class="header__link">About</a></li>
+                <li class="header__nav-item"><a href="#works" class="header__link">Works</a></li>
+                <li class="header__nav-item"><a href="#services" class="header__link">Services</a></li>
+                <li class="header__nav-item"><a href="#footer" class="header__link">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="header__menu-btn"></div>
+          </div>
+        </header>
+
+        <section class="hero">
+          <div class="container hero__container">
+            <p class="text text--big hero__greeting">Wir bieten professionelle Dienstleistungen im Bereich digital Marketing</p>
+            <h1 class="hero__title">Creative & Modern Digital Agency</h1>
+            <div class="hero__info">
+              <p class="hero__descr text text--big">
+                Webdesign, Webentwicklung, Webprogrammierung, Appentwicklung, Softwareentwicklung, Corporate Identity, SMM und SEO Optimierung
+              </p>
+              <a href="#" data-toggle="mform" class="button hero__button"><span>learn more</span></a>
+            </div>
+          </div>
+        </section>
+
+        <div class="ticker">
+          <div class="ticker__wrapper">
+            <div class="ticker__item text">
+              SMM <span>/</span> SEO <span>/</span> BRANDING <span>/</span> MARKETING <span>/</span> WEB DESIGN <span>/</span>
+            </div>
+            <div class="ticker__item text">
+              SMM <span>/</span> SEO <span>/</span> BRANDING <span>/</span> MARKETING <span>/</span> WEB DESIGN <span>/</span>
+            </div>
+            <div class="ticker__item text">
+              SMM <span>/</span> SEO <span>/</span> BRANDING <span>/</span> MARKETING <span>/</span> WEB DESIGN <span>/</span>
+            </div>
+            <div class="ticker__item text">
+              SMM <span>/</span> SEO <span>/</span> BRANDING <span>/</span> MARKETING <span>/</span> WEB DESIGN <span>/</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wrapper__bg"></div>
+    </div>
+
+    <section class="message" id="services">
+      <div class="container">
+        <h2 class="message__title">Unsere Lösungen bringen Ihrem Unternehmen Gewinn</h2>
+      </div>
+    </section>
+
+    <section class="accordion">
+      <ul class="accordion__list">
+        <li class="accordion__item">
+          <div class="container">
+            <button class="accordion__button"><span class="subtitle">Design</span></button>
+            <div class="accordion__content">
+              <p class="accordion__text text">
+                Wir entwickeln eine Corporate Identity, Brand Books, Logos, POS-Materialien, erstellen ein visuelles Identifikationssystem, führen
+                Studie der Markenbekanntheit durch.
+              </p>
+              <p class="accordion__text text">
+                Webentwicklung <br />
+                Wir erstellen Websites für die Aufgaben Ihres Unternehmens, von One-Page-Websites für den schnellen Start eines neuen Projekts oder
+                einer Dienstleistung bis hin zu komplexen Online-Shops mit integriertem Zahlungssystem und einem CRM-System.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="accordion__item">
+          <div class="container">
+            <button class="accordion__button"><span class="subtitle">KONTEXTWERBUNG</span></button>
+            <div class="accordion__content">
+              <p class="accordion__text text">
+                Wir entwickeln eine Corporate Identity, Brand Books, Logos, POS-Materialien, erstellen ein visuelles Identifikationssystem, führen
+                Studie der Markenbekanntheit durch.
+              </p>
+              <p class="accordion__text text">
+                Webentwicklung <br />
+                Wir erstellen Websites für die Aufgaben Ihres Unternehmens, von One-Page-Websites für den schnellen Start eines neuen Projekts oder
+                einer Dienstleistung bis hin zu komplexen Online-Shops mit integriertem Zahlungssystem und einem CRM-System.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="accordion__item">
+          <div class="container">
+            <button class="accordion__button"><span class="subtitle">SMM</span></button>
+            <div class="accordion__content">
+              <p class="accordion__text text">
+                Wir entwickeln eine Corporate Identity, Brand Books, Logos, POS-Materialien, erstellen ein visuelles Identifikationssystem, führen
+                Studie der Markenbekanntheit durch.
+              </p>
+              <p class="accordion__text text">
+                Webentwicklung <br />
+                Wir erstellen Websites für die Aufgaben Ihres Unternehmens, von One-Page-Websites für den schnellen Start eines neuen Projekts oder
+                einer Dienstleistung bis hin zu komplexen Online-Shops mit integriertem Zahlungssystem und einem CRM-System.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="connect" id="about">
+      <div class="connect__wrapper container">
+        <div class="connect__content">
+          <h2 class="connect__title">We Connect Your Business With Market</h2>
+          <p class="text connect__text text--light">
+            Seit 2017 entwickeln wir einzigartige Lösungen für unsere Kunden, damit sich ihr Geschäft entwickelt und die von unserem Team verwendeten
+            Tools die besten Ergebnisse erzielen.
+            <br />
+            <br />
+            Unser Ziel ist es, eine komfortable und effiziente digitale Umgebung für kleine und mittlere Unternehmen zu schaffen, <br />
+            in der wir transparente und effektive Lösungen anbieten.
+          </p>
+        </div>
+        <a href="#" data-toggle="mform" class="connect__button button button--orange"><span>learn more</span></a>
+      </div>
+    </section>
+
+    <section class="works" id="works">
+      <div class="container">
+        <h2 class="works__title">works</h2>
+
+        <ul class="works__cases">
+          <li class="works__case">
+            <div class="works__img">
+              <img class="works__desk" src="/assets/img/smm-case.png" alt="" />
+              <img class="works__mobile" src="/assets/img/smm-case-mobile.png" alt="" />
+            </div>
+            <h3 class="works__subtitle">smm cases</h3>
+            <p class="text works__text">Werbekampagnen und Publikumszuwachs</p>
+            <a href="#" data-toggle="smm" class="button button--orange works__button"><span>learn more</span></a>
+          </li>
+          <li class="works__case">
+            <div class="works__img">
+              <img src="/assets/img/design-case.png" alt="" />
+            </div>
+            <h3 class="works__subtitle">design cases</h3>
+            <p class="text works__text">Entwicklung einer Corporate Identity</p>
+            <a data-toggle="design" href="#" class="button button--orange works__button"><span>learn more</span></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <a href="" class="footer__logo">anar agency</a>
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item"><a class="text" href="#about">About</a></li>
+            <li class="footer__nav-item"><a class="text" href="#works">Works</a></li>
+            <li class="footer__nav-item"><a class="text" href="#services">Services</a></li>
+          </ul>
+          <div class="footer__links">
+            <a href="tel:+491756666066" class="footer__link footer__link--tel">+49 175 6666066</a>
+            <a href="mailto:info@anar.at" class="footer__link footer__link--mail">info@anar.at</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
+    <script src="node_modules/just-validate/dist/just-validate.production.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNJN1PF3CS"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/assets/js/itc-slider.min.js" defer></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

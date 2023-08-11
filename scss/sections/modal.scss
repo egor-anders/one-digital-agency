@@ -1,0 +1,347 @@
+.modal {
+  position: fixed; /* Stay in place */
+  top: 0;
+  left: 0;
+  z-index: 9999; /* Sit on top */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(40 39 39 / 50%); /* Black w/ opacity */
+
+  &--active {
+    display: block;
+  }
+
+  &__content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    box-sizing: border-box;
+    width: 1440px;
+    padding: 44px 100px 50px 80px;
+    background-color: #E6E6E6;
+    transform: translate(-50%, -50%);
+
+    &--form {
+      width: 753px;
+      padding: 51px 100px 80px;
+      background-color: #FFFFFF;
+    }
+
+    &--thanks {
+      width: fit-content;
+      padding: 20px 100px;
+    }
+
+    @media (max-width: 1440px) {
+      width: calc(100% - 80px);
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      width: calc(100% - 20px);
+      max-height: calc(100% - 24px);
+      padding: 50px 8px 0;
+      overflow: auto;
+
+      &--design {
+        padding-bottom: 42px;
+      }
+
+      &--thanks {
+        width: fit-content;
+        width: calc(100% - 20px);
+        padding: 20px 30px;
+      }
+
+      &--form {
+        width: calc(100% - 20px);
+        padding: 19px 30px 30px 28px;
+      }
+    }
+  }
+
+
+  &__slide {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      gap: unset;
+      gap: 25px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 22px;
+    font-weight: 700;
+    font-size: 120px;
+    font-family: 'BarlowCondensed', sans-serif;
+    line-height: 90%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    &--design {
+      margin-bottom: 37px;
+    }
+
+    &--mb {
+      display: none;
+    }
+
+    &--form, &--thanks {
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: 46px;
+      line-height: 150%;
+      letter-spacing: -0.92px;
+      text-transform: none;
+    }
+
+    @media (max-width: $breakpoint-xl) {
+      margin-bottom: 12px;
+      font-size: 90px;
+
+      &--form {
+        font-size: 46px;
+      }
+
+      &--thanks {
+        font-size: 46px;
+      }
+    }
+
+    @media (max-width: 1180px) {
+      &--design {
+        font-size: 40px;
+      }
+
+      &--form {
+        font-size: 46px;
+      }
+
+      &--thanks {
+        font-size: 46px;
+      }
+    }
+
+    @media (max-width: $breakpoint-tb) {
+      font-size: 60px;
+
+      &--design {
+        font-size: 40px;
+      }
+
+      &--form {
+        font-size: 46px;
+      }
+
+      &--thanks {
+        font-size: 46px;
+      }
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 40px;
+
+      &--design {
+        text-align: center;
+      }
+
+      &--form {
+        display: none;
+      }
+
+      &--mb {
+        display: block;
+        margin-bottom: 9px;
+        color: #282727;
+        font-size: 36px;
+        line-height: 90%;
+        letter-spacing: -0.72px;
+      }
+
+      &--thanks {
+        font-size: 36px;
+        line-height: 110%;
+        letter-spacing: -0.72px;
+      }
+    }
+  }
+
+  &__descr {
+    margin: 0 0 60px;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: 'IBMPlexMono', sans-serif;
+    line-height: 150%;
+    letter-spacing: -0.54px;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 12px;
+      font-size: 18px;
+      line-height: 150%;
+      letter-spacing: -0.54px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 13px;
+    font-weight: 700;
+    font-size: 46px;
+    font-family: 'BarlowCondensed', sans-serif;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    @media (max-width: $breakpoint-tb) {
+      font-size: 30px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 6px;
+      font-size: 22px;
+    }
+  }
+
+  &__text {
+    &--smm {
+      max-width: 539px;
+    }
+
+    &--design {
+      @media (max-width: 1180px) {
+        font-size: 12px;
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__cross {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    margin-left: auto;
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13 1.30929L11.6907 0L6.5 5.19071L1.30929 0L0 1.30929L5.19071 6.5L0 11.6907L1.30929 13L6.5 7.80929L11.6907 13L13 11.6907L7.80929 6.5L13 1.30929Z' fill='%23282727'/%3E%3C/svg%3E%0A");
+    background-size: cover;
+    cursor: pointer;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 13px;
+      height: 13px;
+
+      &--form {
+        top: 6px;
+        right: 5px;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__right {
+    width: 331px;
+
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 264px;
+      height: 441px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+  }
+
+  &__design-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  &__pictures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: 1fr;
+      gap: 5px;
+    }
+  }
+
+  &__pic {
+    height: 265px;
+
+    img {
+      height: 100%;
+    }
+
+    @media (max-width: 1180px) {
+      height: 150px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      height: 183px;
+
+      &--1 {
+        order: 1;
+      }
+
+      &--2 {
+        order: 4;
+      }
+
+      &--3 {
+        order: 2;
+      }
+
+      &--4 {
+        order: 3;
+      }
+
+      &--5 {
+        order: 3;
+      }
+
+      &--6 {
+        order: 2;
+      }
+
+      &--7 {
+        order: 4;
+      }
+
+      &--8 {
+        order: 1;
+      }
+
+      &--9 {
+        order: 3;
+      }
+
+      &--10 {
+        order: 4;
+      }
+
+      &--11{
+        order: 2;
+      }
+
+      &--12 {
+        order: 1;
+      }
+    }
+  }
+}

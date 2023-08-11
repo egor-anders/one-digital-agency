@@ -1,0 +1,64 @@
+.hero {
+  border-bottom: 1px solid #282727;
+
+  &__container {
+    padding-top: 54px;
+    padding-bottom: 150px;
+
+    @media (max-width: $breakpoint-tb) {
+      padding-top: 30px;
+      padding-bottom: 60px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding-top: 18px;
+    }
+  }
+
+  &__greeting {
+    margin-bottom: 7px;
+
+    @media (max-width: $breakpoint-tb) {
+      max-width: 500px;
+      margin-bottom: 11px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      max-width: 80%;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @media (max-width: $breakpoint-tb) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 77px;
+
+    @media (max-width: $breakpoint-tb) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__descr {
+    max-width: 630px;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 14px;
+    }
+  }
+}
