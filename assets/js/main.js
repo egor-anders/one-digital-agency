@@ -24,12 +24,12 @@ const mobileCross = document.querySelector('.menu__cross');
 const menuLinks = document.querySelectorAll('.menu__item');
 
 mobileButton.addEventListener('click', () => {
-  mobileMenu.classList.add('menu--active');
+  $(mobileMenu).fadeIn(300);
   document.querySelector('html').classList.add('no-scroll');
 });
 
 function closeMenu() {
-  mobileMenu.classList.remove('menu--active');
+  $(mobileMenu).fadeOut(300);
   document.querySelector('html').classList.remove('no-scroll');
 }
 
@@ -190,33 +190,54 @@ window.addEventListener('scroll', () => {
   }
 });
 
-
-// function onSubmit(token) {
-//   document.getElementById("send-form").submit();
-// }
-
 const form = document.querySelector('.form');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  $('.modal--form').fadeOut(1500);
-  $('.modal--thanks').fadeIn(1500);
-  console.log('Validation passes and form submitted', e);
 
-  let formData = new FormData(e.target);
-  let xhr = new XMLHttpRequest();
+  let tk = '';
 
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
-        console.log('Sent');
+  grecaptcha.ready(function () {
+    grecaptcha.execute('6Lc_ApMnAAAAAOqCxT0HZN3IiQsXtiZJmNF3nurZ', { action: 'homepage' }).then(function (token) {
+      tk = token;
+      document.getElementById('token').value = token;
+
+      const data = new URLSearchParams();
+      for (const pair of new FormData(document.querySelector('form'))) {
+        data.append(pair[0], pair[1]);
       }
-    }
-  }
 
-  xhr.open('POST', '../../main.php', true);
-  xhr.send(formData);
+      fetch('/send.php', {
+        method: 'post',
+        body: data,
+      })
+        .then((response) => response.json())
+        .then((result) => {
+          if (result['om_score'] >= 0.5) {
+            console.log('You are human');
+            $('.modal--form').fadeOut(1500);
+            $('.modal--thanks').fadeIn(1500);
+            console.log('Validation passes and form submitted', e);
 
-  e.target.reset();
-  isRezeble=true;
+            let formData = new FormData(e.target);
+            let xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+              if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                  console.log('Sent');
+                }
+              }
+            };
+
+            xhr.open('POST', '/main.php', true);
+            xhr.send(formData);
+            e.target.reset();
+            isRezeble = true;
+          } else {
+            console.log('You are bot!');
+          }
+        });
+    });
+  });
 });

@@ -24,9 +24,14 @@
     position: relative;
     width: 100%;
     padding: 0;
+    color: #282727;
     text-align: left;
     background: none;
     border: none;
+
+    .subtitle {
+      color: #282727;
+    }
 
     &::after {
       position: absolute;

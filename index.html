@@ -4,12 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="date=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="format-detection" content="email=no" />
     <link rel="stylesheet" href="/assets/css/itc-slider.min.css" />
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link type="image/x-icon" href="/assets/favicon/favicon.ico" rel="shortcut icon" />
     <link type="image/x-icon" href="/assets/favicon/favicon.ico" rel="icon" />
-    <title>ANAR AGENCY</title>
-    <meta name="description" content="ANAR AGENCY" />
+    <title>ONE DIGITAL AGENCY</title>
+    <meta name="description" content="ONE DIGITAL AGENCY" />
   </head>
 
   <body class="body">
@@ -24,22 +28,22 @@
         <form action="#" class="form" method="POST" id="send-form" enctype="multipart/form-data">
           <div class="form__inputs">
             <label class="form__label">
-              <input class="input input-name" type="text" data-validate-field="name" name="Name" placeholder="Wer bist du?" autofocus required/>
+              <input class="input input-name" type="text" data-validate-field="name" name="name" placeholder="Wer bist du?" autofocus required />
             </label>
             <label class="form__label">
-              <input class="input input-mail" type="email" data-validate-field="email" name="Email" placeholder="Deine Email?" required/>
+              <input class="input input-mail" type="email" data-validate-field="email" name="email" placeholder="Deine Email?" required />
             </label>
             <label class="form__label">
-              <input class="input input-tel" type="tel" data-validate-field="tel" name="Phone" placeholder="Telefon für Rückfragen?" required/>
+              <input class="input input-tel" type="tel" data-validate-field="tel" name="phone" placeholder="Telefon für Rückfragen?" required />
             </label>
             <label class="form__label">
-              <input class="input input-theme" type="text" data-validate-field="betreff" name="Subject" placeholder="Betreff?" required/>
+              <input class="input input-theme" type="text" data-validate-field="betreff" name="subject" placeholder="Betreff?" required />
             </label>
             <label class="form__label">
               <textarea
                 class="textarea"
                 data-validate-field="textarea"
-                name="Message"
+                name="message"
                 id=""
                 cols="30"
                 rows="10"
@@ -56,7 +60,8 @@
               Übermittlung deiner Daten.</label
             >
           </div>
-          <button data-sitekey="6Lc_ApMnAAAAAOqCxT0HZN3IiQsXtiZJmNF3nurZ" data-callback="onSubmit" data-action="submit" type="submit" class="modal__button form__button g-recaptcha">
+          <input type="hidden" id="token" name="token" />
+          <button type="submit" class="modal__button form__button">
             <span>Senden</span>
           </button>
         </form>
@@ -148,7 +153,7 @@
         </div>
 
         <div class="banner__row banner__row_links">
-          <a href="cookie.html" class="link">Сoockie-Richtlinie</a>
+          <a href="cookie.html" class="link">Cookie-Richtlinie</a>
           <a href="datenschutz.html" class="link">Datenschutz</a>
           <a href="impressum.html" class="link">Impressum</a>
         </div>
@@ -162,15 +167,44 @@
         <div class="menu__cross"></div>
 
         <div class="menu__wrapper">
-          <a href="#" class="menu__logo">anar agency</a>
+          <a href="#" class="menu__logo">one digital</a>
           <div class="menu__list">
             <a class="text menu__item" href="#about">About</a>
             <a class="text menu__item" href="#works">Works</a>
             <a class="text menu__item" href="#services">Services</a>
           </div>
           <div class="menu__links">
-            <a href="mailto:info@anar.at" class="menu__link">info@anar.at</a>
+            <a href="mailto:info@one-digital.agency" class="menu__link">info@one-digital.agency</a>
             <a href="tel:+491756666066" class="menu__link">+49 175 6666066</a>
+            <a href="https://wa.me/+491756666066" class="menu__link menu__link--whatsapp">
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 455.731 455.731"
+                style="enable-background: new 0 0 455.731 455.731"
+                xml:space="preserve"
+              >
+                <g>
+                  <rect x="0" y="0" style="fill: rgb(255, 103, 0)" width="455.731" height="455.731" fill="#1BD741"></rect>
+                  <g>
+                    <path
+                      style="fill: rgb(255, 255, 255)"
+                      d="M68.494,387.41l22.323-79.284c-14.355-24.387-21.913-52.134-21.913-80.638 c0-87.765,71.402-159.167,159.167-159.167s159.166,71.402,159.166,159.167c0,87.765-71.401,159.167-159.166,159.167 c-27.347,0-54.125-7-77.814-20.292L68.494,387.41z M154.437,337.406l4.872,2.975c20.654,12.609,44.432,19.274,68.762,19.274 c72.877,0,132.166-59.29,132.166-132.167S300.948,95.321,228.071,95.321S95.904,154.611,95.904,227.488 c0,25.393,7.217,50.052,20.869,71.311l3.281,5.109l-12.855,45.658L154.437,337.406z"
+                      fill="#FFFFFF"
+                    ></path>
+                    <path
+                      style="fill: rgb(255, 255, 255)"
+                      d="M183.359,153.407l-10.328-0.563c-3.244-0.177-6.426,0.907-8.878,3.037 c-5.007,4.348-13.013,12.754-15.472,23.708c-3.667,16.333,2,36.333,16.667,56.333c14.667,20,42,52,90.333,65.667 c15.575,4.404,27.827,1.435,37.28-4.612c7.487-4.789,12.648-12.476,14.508-21.166l1.649-7.702c0.524-2.448-0.719-4.932-2.993-5.98 l-34.905-16.089c-2.266-1.044-4.953-0.384-6.477,1.591l-13.703,17.764c-1.035,1.342-2.807,1.874-4.407,1.312 c-9.384-3.298-40.818-16.463-58.066-49.687c-0.748-1.441-0.562-3.19,0.499-4.419l13.096-15.15 c1.338-1.547,1.676-3.722,0.872-5.602l-15.046-35.201C187.187,154.774,185.392,153.518,183.359,153.407z"
+                      fill="#FFFFFF"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -326,7 +360,7 @@
       <div class="wrapper__content">
         <header class="header">
           <div class="header__wrapper container">
-            <a href="#" class="header__logo">anar agency</a>
+            <a href="#" class="header__logo">one digital</a>
             <nav class="header__nav">
               <ul class="header__nav-list">
                 <li class="header__nav-item"><a href="#about" class="header__link">About</a></li>
@@ -347,7 +381,7 @@
               <p class="hero__descr text text--big">
                 Webdesign, Webentwicklung, Webprogrammierung, Appentwicklung, Softwareentwicklung, Corporate Identity, SMM und SEO Optimierung
               </p>
-              <a href="#" data-toggle="mform" class="button hero__button"><span>learn more</span></a>
+              <a href="#" class="button hero__button" data-toggle="mform"><span>Anfrage</span></a>
             </div>
           </div>
         </section>
@@ -402,14 +436,16 @@
             <button class="accordion__button"><span class="subtitle">KONTEXTWERBUNG</span></button>
             <div class="accordion__content">
               <p class="accordion__text text">
-                Wir entwickeln eine Corporate Identity, Brand Books, Logos, POS-Materialien, erstellen ein visuelles Identifikationssystem, führen
-                Studie der Markenbekanntheit durch.
+                Unsere Digitalagentur bietet Kontextwerbung als Dienstleistung an, um Unternehmen dabei zu helfen, ihre Zielgruppen effektiver zu
+                erreichen. Wir nutzen fortschrittliche Technologien und Strategien, um sicherzustellen, dass Ihre Anzeigen den richtigen Personen zur
+                richtigen Zeit und am richtigen Ort gezeigt werden. Mit unserer Expertise in der Kontextwerbung können wir Ihnen helfen, Ihre
+                Online-Präsenz zu stärken, Ihre Markenbekanntheit zu erhöhen und Ihre Verkaufszahlen zu steigern.
               </p>
-              <p class="accordion__text text">
+              <!--<p class="accordion__text text">
                 Webentwicklung <br />
                 Wir erstellen Websites für die Aufgaben Ihres Unternehmens, von One-Page-Websites für den schnellen Start eines neuen Projekts oder
                 einer Dienstleistung bis hin zu komplexen Online-Shops mit integriertem Zahlungssystem und einem CRM-System.
-              </p>
+              </p>-->
             </div>
           </div>
         </li>
@@ -418,13 +454,16 @@
             <button class="accordion__button"><span class="subtitle">SMM</span></button>
             <div class="accordion__content">
               <p class="accordion__text text">
-                Wir entwickeln eine Corporate Identity, Brand Books, Logos, POS-Materialien, erstellen ein visuelles Identifikationssystem, führen
-                Studie der Markenbekanntheit durch.
-              </p>
-              <p class="accordion__text text">
+                Unsere Digitalagentur bietet maßgeschneiderte SMM-Dienstleistungen an, die auf Ihre spezifischen Bedürfnisse und Ziele abgestimmt
+                sind. Wir entwickeln und implementieren Strategien, die auf die Verbesserung Ihrer Markenbekanntheit und das Engagement Ihrer
+                Zielgruppe abzielen. Unser Team von Experten versteht die Dynamik jeder Social Media Plattform und weiß, wie man ansprechende Inhalte
+                erstellt, die Ihre Zielgruppe zum Handeln anregen. Mit unserer SMM-Dienstleistung können Sie sicher sein, dass Ihre Marke die
+                richtigen Leute auf den richtigen Plattformen erreicht.
+                <!--<p class="accordion__text text">
                 Webentwicklung <br />
                 Wir erstellen Websites für die Aufgaben Ihres Unternehmens, von One-Page-Websites für den schnellen Start eines neuen Projekts oder
                 einer Dienstleistung bis hin zu komplexen Online-Shops mit integriertem Zahlungssystem und einem CRM-System.
+              </p>-->
               </p>
             </div>
           </div>
@@ -445,7 +484,7 @@
             in der wir transparente und effektive Lösungen anbieten.
           </p>
         </div>
-        <a href="#" data-toggle="mform" class="connect__button button button--orange"><span>learn more</span></a>
+        <a href="#" class="connect__button button button--orange" data-toggle="mform"><span>Anfrage</span></a>
       </div>
     </section>
 
@@ -461,7 +500,7 @@
             </div>
             <h3 class="works__subtitle">smm cases</h3>
             <p class="text works__text">Werbekampagnen und Publikumszuwachs</p>
-            <a href="#" data-toggle="smm" class="button button--orange works__button"><span>learn more</span></a>
+            <a href="#" data-toggle="smm" class="button button--orange works__button"><span>mehr</span></a>
           </li>
           <li class="works__case">
             <div class="works__img">
@@ -469,7 +508,7 @@
             </div>
             <h3 class="works__subtitle">design cases</h3>
             <p class="text works__text">Entwicklung einer Corporate Identity</p>
-            <a data-toggle="design" href="#" class="button button--orange works__button"><span>learn more</span></a>
+            <a data-toggle="design" href="#" class="button button--orange works__button"><span>mehr</span></a>
           </li>
         </ul>
       </div>
@@ -478,22 +517,50 @@
     <footer class="footer" id="footer">
       <div class="container">
         <div class="footer__wrapper">
-          <a href="" class="footer__logo">anar agency</a>
+          <a href="" class="footer__logo">one digital</a>
           <ul class="footer__nav-list">
             <li class="footer__nav-item"><a class="text" href="#about">About</a></li>
             <li class="footer__nav-item"><a class="text" href="#works">Works</a></li>
             <li class="footer__nav-item"><a class="text" href="#services">Services</a></li>
           </ul>
           <div class="footer__links">
+            <a href="https://wa.me/+491756666066" class="footer__link footer__link--whatsapp" target="_blank">
+              <svg
+                version="1.1"
+                id="Capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 455.731 455.731"
+                style="enable-background: new 0 0 455.731 455.731"
+                xml:space="preserve"
+              >
+                <g>
+                  <rect x="0" y="0" style="fill: rgb(255, 103, 0)" width="455.731" height="455.731" fill="#1BD741"></rect>
+                  <g>
+                    <path
+                      style="fill: rgb(255, 255, 255)"
+                      d="M68.494,387.41l22.323-79.284c-14.355-24.387-21.913-52.134-21.913-80.638 c0-87.765,71.402-159.167,159.167-159.167s159.166,71.402,159.166,159.167c0,87.765-71.401,159.167-159.166,159.167 c-27.347,0-54.125-7-77.814-20.292L68.494,387.41z M154.437,337.406l4.872,2.975c20.654,12.609,44.432,19.274,68.762,19.274 c72.877,0,132.166-59.29,132.166-132.167S300.948,95.321,228.071,95.321S95.904,154.611,95.904,227.488 c0,25.393,7.217,50.052,20.869,71.311l3.281,5.109l-12.855,45.658L154.437,337.406z"
+                      fill="#FFFFFF"
+                    ></path>
+                    <path
+                      style="fill: rgb(255, 255, 255)"
+                      d="M183.359,153.407l-10.328-0.563c-3.244-0.177-6.426,0.907-8.878,3.037 c-5.007,4.348-13.013,12.754-15.472,23.708c-3.667,16.333,2,36.333,16.667,56.333c14.667,20,42,52,90.333,65.667 c15.575,4.404,27.827,1.435,37.28-4.612c7.487-4.789,12.648-12.476,14.508-21.166l1.649-7.702c0.524-2.448-0.719-4.932-2.993-5.98 l-34.905-16.089c-2.266-1.044-4.953-0.384-6.477,1.591l-13.703,17.764c-1.035,1.342-2.807,1.874-4.407,1.312 c-9.384-3.298-40.818-16.463-58.066-49.687c-0.748-1.441-0.562-3.19,0.499-4.419l13.096-15.15 c1.338-1.547,1.676-3.722,0.872-5.602l-15.046-35.201C187.187,154.774,185.392,153.518,183.359,153.407z"
+                      fill="#FFFFFF"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </a>
             <a href="tel:+491756666066" class="footer__link footer__link--tel">+49 175 6666066</a>
-            <a href="mailto:info@anar.at" class="footer__link footer__link--mail">info@anar.at</a>
+            <a href="mailto:info@one-digital.agency" class="footer__link footer__link--mail">info@one-digital.agency</a>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- <script src="https://www.google.com/recaptcha/api.js"></script> -->
-    <script src="node_modules/just-validate/dist/just-validate.production.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Lc_ApMnAAAAAOqCxT0HZN3IiQsXtiZJmNF3nurZ"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNJN1PF3CS"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="/assets/js/itc-slider.min.js" defer></script>

@@ -1,19 +1,21 @@
 <?php
-// Файлы phpmailer
-require 'phpmailer/PHPMailer.php';
-require 'phpmailer/SMTP.php';
-require 'phpmailer/Exception.php';
+// Формирование самого письма
+$title = "Feedback form";
+$to = 'info@one-digital.agency';
 
-$title = "Тема письма";
-$file = $_FILES['file'];
+$mail_data = [
+  'name' => $_POST['name'],
+  'email' => $_POST['email'],
+  'phone' => $_POST['phone'],
+  'subject' => $_POST['subject'],
+  'message' => $_POST['message']
+];
 
 $c = true;
-// Формирование самого письма
-$title = "Customer data";
-foreach ( $_POST as $key => $value ) {
-  if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+foreach ($mail_data as $key => $value) {
+  if ($value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject") {
     $body .= "
-    " . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
+    " . (($c = !$c) ? '<tr>' : '<tr style="background-color: #f8f8f8;">') . "
       <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
       <td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
     </tr>
@@ -23,47 +25,16 @@ foreach ( $_POST as $key => $value ) {
 
 $body = "<table style='width: 100%;'>$body</table>";
 
-// Настройки PHPMailer
-$mail = new PHPMailer\PHPMailer\PHPMailer();
-
 try {
-  $mail->isSMTP();
-  $mail->CharSet = "UTF-8";
-  $mail->SMTPAuth   = true;
+  $headers = [];
+  $headers[] = 'MIME-Version: 1.0';
+  $headers[] = 'Content-type: text/html; charset=utf-8';
+  $headers[] = 'From: ONE DIGITAL AGENCY <info@one-digital.agency>';
 
-  // Настройки вашей почты
-  $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-  $mail->Username   = 'workm8508@gmail.com'; // Логин на почте
-  $mail->Password   = 'ceddfppbwqfrupjn'; // Пароль на почте
-  $mail->SMTPSecure = 'ssl';
-  $mail->Port       = 465;
 
-  $mail->setFrom('workm8508@gmail.com', 'Your website client'); // Адрес самой почты и имя отправителя
+  mail($to, $title, $body, implode("\r\n", $headers));
 
-  // Получатель письма
-  $mail->addAddress('andersegor123@gmail.com');
-
-  // Прикрипление файлов к письму
-  if (!empty($file['name'][0])) {
-    for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
-      $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
-      $filename = $file['name'][$ct];
-      if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
-          $mail->addAttachment($uploadfile, $filename);
-          $rfile[] = "Файл $filename прикреплён";
-      } else {
-          $rfile[] = "Не удалось прикрепить файл $filename";
-      }
-    }
-  }
-
-  // Отправка сообщения
-  $mail->isHTML(true);
-  $mail->Subject = $title;
-  $mail->Body = $body;
-
-  $mail->send();
 
 } catch (Exception $e) {
-  $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
+  $status = "Message not sent. Cause of error: {$e->getMessage()}";
 }
